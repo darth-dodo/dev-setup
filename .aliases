@@ -139,3 +139,21 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+########### Dodo custom aliases ##########
+
+# move to the stuff folder
+alias stuff="cd ~/stuff"
+
+
+# move to the study folder
+alias sd="cd ~/stuff/study"
+
+# move to the work folder
+alias wk="cd ~/stuff/work"
+
+# move to the rndom folder
+alias rd="cd ~/stuff/rndom"
+
+# move to the learn folder
+alias lrn="cd ~/stuff/study/learn"
