@@ -154,6 +154,7 @@ brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" heroku-toolbelt
 brew cask install --appdir="/Applications" macdown
 brew cask install --appdir="/Applications" valentina-studio
+brew cask install --appdir="/Applications" staruml
 
 # Misc casks
 brew cask install --appdir="/Applications" google-chrome
@@ -170,7 +171,6 @@ brew cask install --appdir="/Applications" appcleaner
 brew cask install --appdir="/Applications" transmission
 brew cask install --appdir="/Applications" itsycal
 brew cask install --appdir="/Applications" spectacle
-brew cask install --appdir="/Applications" asepsis
 # brew cask install --appdir="/Applications" evernote
 #brew cask install --appdir="/Applications" gimp
 #brew cask install --appdir="/Applications" inkscape
