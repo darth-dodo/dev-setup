@@ -25,7 +25,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 sudo nvram SystemAudioVolume=" "
 
 # Disable transparency in the menu bar and elsewhere on Yosemite
-defaults write com.apple.universalaccess reduceTransparency -bool true
+# defaults write com.apple.universalaccess reduceTransparency -bool true
 
 # Menu bar: hide the Time Machine, Volume, and User icons
 for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
@@ -109,7 +109,7 @@ sudo systemsetup -setrestartfreeze on
 sudo systemsetup -setcomputersleep Off > /dev/null
 
 # Set the computer to sleep after 60 minutes
-#sudo systemsetup -setcomputersleep 60
+sudo systemsetup -setcomputersleep 60
 
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
@@ -211,11 +211,11 @@ defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Save screenshots to the desktop
-#defaults write com.apple.screencapture location -string "${HOME}/Desktop"
+# defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 
 # Save screenshots to the Pictures/Screenshots
-#mkdir ${HOME}/Pictures/Screenshots
-#defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screenshots"
+mkdir ${HOME}/Pictures/Screenshots
+defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screenshots"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
@@ -371,7 +371,7 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Wipe all (default) app icons from the Dock
 # This is only really useful when setting up a new Mac, or if you don’t use
 # the Dock to launch apps.
-#defaults write com.apple.dock persistent-apps -array
+defaults write com.apple.dock persistent-apps -array
 
 # Don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
@@ -384,7 +384,7 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 defaults write com.apple.dock expose-group-by-app -bool false
 
 # Disable Dashboard
-#defaults write com.apple.dashboard mcx-disabled -bool true
+defaults write com.apple.dashboard mcx-disabled -bool true
 
 # Don’t show Dashboard as a Space
 defaults write com.apple.dock dashboard-in-overlay -bool true
@@ -777,9 +777,9 @@ cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ 
 # Transmission.app                                                            #
 ###############################################################################
 
-# Use `~/Documents/Torrents` to store incomplete downloads
+# Use `~/Documents/Incomplete` to store incomplete downloads
 defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Documents/Torrents"
+defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Documents/Incomplete"
 
 # Don’t prompt for confirmation before downloading
 defaults write org.m0k.transmission DownloadAsk -bool false
@@ -792,30 +792,30 @@ defaults write org.m0k.transmission WarningDonate -bool false
 # Hide the legal disclaimer
 defaults write org.m0k.transmission WarningLegal -bool false
 
-###############################################################################
-# Twitter.app                                                                 #
-###############################################################################
-
-# Disable smart quotes as it’s annoying for code tweets
-defaults write com.twitter.twitter-mac AutomaticQuoteSubstitutionEnabled -bool false
-
-# Show the app window when clicking the menu bar icon
-defaults write com.twitter.twitter-mac MenuItemBehavior -int 1
-
-# Enable the hidden ‘Develop’ menu
-defaults write com.twitter.twitter-mac ShowDevelopMenu -bool true
-
-# Open links in the background
-defaults write com.twitter.twitter-mac openLinksInBackground -bool true
-
-# Allow closing the ‘new tweet’ window by pressing `Esc`
-defaults write com.twitter.twitter-mac ESCClosesComposeWindow -bool true
-
-# Show full names rather than Twitter handles
-defaults write com.twitter.twitter-mac ShowFullNames -bool true
-
-# Hide the app in the background if it’s not the front-most window
-defaults write com.twitter.twitter-mac HideInBackground -bool true
+# ###############################################################################
+# # Twitter.app                                                                 #
+# ###############################################################################
+#
+# # Disable smart quotes as it’s annoying for code tweets
+# defaults write com.twitter.twitter-mac AutomaticQuoteSubstitutionEnabled -bool false
+#
+# # Show the app window when clicking the menu bar icon
+# defaults write com.twitter.twitter-mac MenuItemBehavior -int 1
+#
+# # Enable the hidden ‘Develop’ menu
+# defaults write com.twitter.twitter-mac ShowDevelopMenu -bool true
+#
+# # Open links in the background
+# defaults write com.twitter.twitter-mac openLinksInBackground -bool true
+#
+# # Allow closing the ‘new tweet’ window by pressing `Esc`
+# defaults write com.twitter.twitter-mac ESCClosesComposeWindow -bool true
+#
+# # Show full names rather than Twitter handles
+# defaults write com.twitter.twitter-mac ShowFullNames -bool true
+#
+# # Hide the app in the background if it’s not the front-most window
+# defaults write com.twitter.twitter-mac HideInBackground -bool true
 
 ###############################################################################
 # Spectacle.app                                                               #
