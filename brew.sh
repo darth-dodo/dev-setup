@@ -133,8 +133,8 @@ brew link libxml2 --force
 brew link libxslt --force
 
 # Install Heroku
-brew install heroku-toolbelt
-heroku update
+# brew install heroku-toolbelt
+# heroku update
 
 # Install Cask
 brew install caskroom/cask/brew-cask
@@ -150,11 +150,12 @@ brew cask install --appdir="~/Applications" xquartz
 brew cask install --appdir="/Applications" sublime-text3
 brew cask install --appdir="/Applications" atom
 brew cask install --appdir="/Applications" virtualbox
-# brew cask install --appdir="/Applications" vagrant
-brew cask install --appdir="/Applications" heroku-toolbelt
+# brew cask install --appdir="/Applications" heroku-toolbelt
 brew cask install --appdir="/Applications" macdown
 brew cask install --appdir="/Applications" valentina-studio
 brew cask install --appdir="/Applications" staruml
+# brew cask install --appdir="/Applications" vagrant
+
 
 # Misc casks
 brew cask install --appdir="/Applications" google-chrome
@@ -190,3 +191,4 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch 
 
 # Remove outdated versions from the cellar.
 brew cleanup
+brew cask cleanup
